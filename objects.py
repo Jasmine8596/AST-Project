@@ -5,3 +5,7 @@ class Object:
         self.name = object_name
         self.number = object_num
         self.percentage = object_percentage
+
+    def __str__(self):
+        string = self.name + " , " + str(self.number) + " , " + str(self.percentage)
+        return string
