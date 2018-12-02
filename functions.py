@@ -57,14 +57,18 @@ if __name__ == "__main__":
 
     result = obj.count_number_of_sensors(sensor_input)
     print("Number of sensors:",result)
+    print("\n")
 
     result = obj.detect_number_of_objects(sensor_input)
     print("Number of objects detected:",result)
+    print("\n")
 
     result = obj.detect_objects(sensor_input)
     print("Objects detected:",result)
+    print("\n")
 
     result = obj.create_objects(objects_found)
     print("Objects created:")
     for param in result:
-        print(param.name,param.number,param.percentage)
+        print(param)
+    print("\n")
