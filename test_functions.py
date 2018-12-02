@@ -24,6 +24,11 @@ class TestCodes(unittest.TestCase):
         result = TestCodes.test.detect_objects([TestCodes.sensor1,TestCodes.sensor2])
         self.assertEqual(TestCodes.objects,result)
 
+    def test_create_objects(self):
+
+        result = TestCodes.test.create_objects(TestCodes.objects)
+        self.assertEqual(TestCodes.objects[2],result[2].name)
+
 
 if __name__ == "__main__":
     unittest.main(exit=False)
