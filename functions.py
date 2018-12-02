@@ -1,4 +1,5 @@
 from objects import Object
+import numpy as np
 
 
 class combine_modalities:
@@ -38,11 +39,18 @@ class combine_modalities:
 
         return self.objects_detected
 
-    def create_objects(self, sensor_inputs):
+    def create_objects(self, sensor_inputs, sensors):
 
         for index, object_found in enumerate(sensor_inputs):
             created_object = Object(object_found, index + 1)
             self.objects.append(created_object)
+
+        sensors = np.array(sensors)
+        percentages = sensors[:, :, 2]
+        percentages = percentages.T
+
+        for index, percentage in enumerate(percentages):
+            self.objects[index].percentage = max(percentage)
 
         return self.objects
 
@@ -67,7 +75,7 @@ if __name__ == "__main__":
     print("Objects detected:",result)
     print("\n")
 
-    result = obj.create_objects(objects_found)
+    result = obj.create_objects(objects_found, sensor_input)
     print("Objects created:")
     for param in result:
         print(param)
