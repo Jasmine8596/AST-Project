@@ -8,6 +8,7 @@ class TestCodes(unittest.TestCase):
     sensor1 = [('knife', 1, 99), ('scissor', 2, 65), ('spoon', 3, 33), ('spoon', 4, 80), ('keys', 5, 95)]
     sensor2 = [('knife', 1, 55), ('scissor', 2, 95), ('fork', 3, 99), ('spoon', 4, 99), ('keys', 5, 95)]
     objects = ["knife", "scissor", "fork", "spoon", "keys"]
+    percentage_required = [99, 95, 99, 99, 95]
 
     def test_count_number_of_sensors(self):
 
@@ -32,6 +33,12 @@ class TestCodes(unittest.TestCase):
         self.assertEqual(TestCodes.objects[2], result[2].name)
         self.assertEqual(TestCodes.objects[3], result[3].name)
         self.assertEqual(TestCodes.objects[4], result[4].name)
+
+        self.assertEqual(TestCodes.percentage_required[0], result[0].percentage)
+        self.assertEqual(TestCodes.percentage_required[1], result[1].percentage)
+        self.assertEqual(TestCodes.percentage_required[2], result[2].percentage)
+        self.assertEqual(TestCodes.percentage_required[3], result[3].percentage)
+        self.assertEqual(TestCodes.percentage_required[4], result[4].percentage)
 
 
 if __name__ == "__main__":
