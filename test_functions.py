@@ -34,11 +34,11 @@ class TestCodes(unittest.TestCase):
         self.assertEqual(TestCodes.objects[3], result[3].name)
         self.assertEqual(TestCodes.objects[4], result[4].name)
 
-        self.assertEqual(TestCodes.percentage_required[0], result[0].percentage)
-        self.assertEqual(TestCodes.percentage_required[1], result[1].percentage)
-        self.assertEqual(TestCodes.percentage_required[2], result[2].percentage)
-        self.assertEqual(TestCodes.percentage_required[3], result[3].percentage)
-        self.assertEqual(TestCodes.percentage_required[4], result[4].percentage)
+        self.assertEqual(TestCodes.percentage_required[0], int(result[0].percentage))
+        self.assertEqual(TestCodes.percentage_required[1], int(result[1].percentage))
+        self.assertEqual(TestCodes.percentage_required[2], int(result[2].percentage))
+        self.assertEqual(TestCodes.percentage_required[3], int(result[3].percentage))
+        self.assertEqual(TestCodes.percentage_required[4], int(result[4].percentage))
 
 
 if __name__ == "__main__":
