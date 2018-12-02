@@ -27,7 +27,11 @@ class TestCodes(unittest.TestCase):
     def test_create_objects(self):
 
         result = TestCodes.test.create_objects(TestCodes.objects)
-        self.assertEqual(TestCodes.objects[2],result[2].name)
+        self.assertEqual(TestCodes.objects[0], result[0].name)
+        self.assertEqual(TestCodes.objects[1], result[1].name)
+        self.assertEqual(TestCodes.objects[2], result[2].name)
+        self.assertEqual(TestCodes.objects[3], result[3].name)
+        self.assertEqual(TestCodes.objects[4], result[4].name)
 
 
 if __name__ == "__main__":
