@@ -27,7 +27,7 @@ class TestCodes(unittest.TestCase):
 
     def test_create_objects(self):
 
-        result = TestCodes.test.create_objects(TestCodes.objects)
+        result = TestCodes.test.create_objects(TestCodes.objects, [TestCodes.sensor1, TestCodes.sensor2])
         self.assertEqual(TestCodes.objects[0], result[0].name)
         self.assertEqual(TestCodes.objects[1], result[1].name)
         self.assertEqual(TestCodes.objects[2], result[2].name)
