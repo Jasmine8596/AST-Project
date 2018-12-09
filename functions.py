@@ -61,6 +61,7 @@ class CombineModalities:
 
 
 if __name__ == "__main__":
+
     combined_modality = CombineModalities()
 
     sensor1 = InputSensor()
@@ -68,6 +69,14 @@ if __name__ == "__main__":
 
     sensor2 = InputSensor()
     sensor2.data = [("keys", 5, 95), ("spoon", 4, 99), ("fork", 3, 99), ("scissor", 2, 95), ("knife", 1, 55)]
+
+
+    obj = CombineModalities()
+
+    # sensor1 = [('knife', 1, 99), ('scissor', 2, 65), ('spoon', 3, 33), ('spoon', 4, 80), ('keys', 5, 95)]
+    # sensor2 = [('knife', 1, 55), ('scissor', 2, 95), ('fork', 3, 99), ('spoon', 4, 99), ('keys', 5, 95)]
+    sensor1 = [("knife", 1, 99), ("scissor", 2, 65), ("spoon", 3, 33), ("spoon", 4, 80), ("keys", 5, 95)]
+    sensor2 = [("keys", 5, 95), ("spoon", 4, 99), ("fork", 3, 99), ("scissor", 2, 95), ("knife", 1, 55)]
 
     sensor_input = [sensor1,sensor2]
 

@@ -6,6 +6,7 @@ from input_sensor import InputSensor
 class TestCodes(unittest.TestCase):
 
     test = CombineModalities()
+
     sensor1 = InputSensor()
     sensor1.data = [("knife", 1, 99), ("scissor", 2, 65), ("spoon", 3, 33), ("spoon", 4, 80), ("keys", 5, 95)]
 
@@ -17,6 +18,13 @@ class TestCodes(unittest.TestCase):
     objects_detected = ["knife","scissor","fork","spoon","keys"]
     percentage_required = [99,95,99,99,95]
 
+    sensor1 = []
+    sensor2 = []
+    objects_detected = []
+    percentage_required = []
+    objects = []
+
+
     def test_count_number_of_sensors(self):
 
         self.test.number_of_sensors = self.test.count_number_of_sensors(self.sensor_input)
@@ -24,8 +32,13 @@ class TestCodes(unittest.TestCase):
 
     def test_detect_number_of_objects(self):
 
+
         self.test.number_of_objects = self.test.detect_number_of_objects(self.sensor_input)
         self.assertEqual(5,self.test.number_of_objects)
+
+
+        result = TestCodes.test.detect_number_of_objects([TestCodes.sensor1,TestCodes.sensor2])
+        self.assertEqual(0,result)
 
 
     def test_merge_sensor_data(self):
