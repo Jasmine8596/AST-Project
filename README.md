@@ -75,4 +75,14 @@ This helps to detect correct number of objects in case of separate or repeating 
 This is done in a single module and no duplicates are created.
 - Condition for empty list is also updated.
 
+<br>
+
+#### Submission for 09.01.2018:
+
+| Test function | Description |
+|---------------|-------------|
+| test_count_number_of_sensors | This test case tests the number of input sensors counted |
+| test_detect_number_of_objects | This test case tests the number of objects detected |
+| test_merge_sensor_data | This test case tests the length of merged list which is summation of elements of all the input sensors |
+| test_create_final_objects | This test case tests if the object names and object percentages are correct and in true sequence |
 
