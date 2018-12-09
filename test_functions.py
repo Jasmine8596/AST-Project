@@ -14,9 +14,7 @@ class TestCodes(unittest.TestCase):
 
     sensor_input = [sensor1,sensor2]
 
-    objects_detected = []
-    percentage_required = []
-    objects = []
+    objects_detected = ["knife","scissor","fork","spoon","keys"]
 
     def test_count_number_of_sensors(self):
 
@@ -28,13 +26,11 @@ class TestCodes(unittest.TestCase):
         number_of_objects_actual = TestCodes.test.detect_number_of_objects(TestCodes.sensor_input)
         self.assertEqual(5,number_of_objects_actual)
 
-    def test_detect_objects(self):
-
-        pass
 
     def test_create_objects(self):
 
-        pass
+        created_objects = TestCodes.test.create_objects(TestCodes.sensor_input)
+        self.assertEqual(TestCodes.objects_detected[0],created_objects[0].name)
 
 
 if __name__ == "__main__":
