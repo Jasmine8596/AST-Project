@@ -29,9 +29,11 @@ class CombineModalities:
 
     def merge_sensor_data(self,sensor_inputs):
 
-        for sensor in sensor_inputs:
-            for recognised_object in sensor.data:
-                self.merged_sensor_data.append(recognised_object)
+        if self.number_of_objects != 0:
+
+            for sensor in sensor_inputs:
+                for recognised_object in sensor.data:
+                    self.merged_sensor_data.append(recognised_object)
 
         return self.merged_sensor_data
 
