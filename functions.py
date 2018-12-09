@@ -2,6 +2,7 @@ from objects import Object
 import numpy as np
 
 
+
 class CombineModalities:
     def __init__(self):
         self.number_of_sensors = 0
