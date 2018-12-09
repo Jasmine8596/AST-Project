@@ -1,14 +1,14 @@
-from functions import combine_modalities
+from functions import CombineModalities
 import unittest
 
 
 class TestCodes(unittest.TestCase):
 
-    test = combine_modalities()
-    sensor1 = [('knife', 1, 99), ('scissor', 2, 65), ('spoon', 3, 33), ('spoon', 4, 80), ('keys', 5, 95)]
-    sensor2 = [('knife', 1, 55), ('scissor', 2, 95), ('fork', 3, 99), ('spoon', 4, 99), ('keys', 5, 95)]
-    objects_detected = ["knife", "scissor", "fork", "spoon", "keys"]
-    percentage_required = [99, 95, 99, 99, 95]
+    test = CombineModalities()
+    sensor1 = []
+    sensor2 = []
+    objects_detected = []
+    percentage_required = []
     objects = []
 
     def test_count_number_of_sensors(self):
@@ -19,7 +19,7 @@ class TestCodes(unittest.TestCase):
     def test_detect_number_of_objects(self):
 
         result = TestCodes.test.detect_number_of_objects([TestCodes.sensor1,TestCodes.sensor2])
-        self.assertEqual(5,result)
+        self.assertEqual(0,result)
 
     def test_detect_objects(self):
 
