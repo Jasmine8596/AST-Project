@@ -1,4 +1,4 @@
-import pprint 
+from pprint import pprint
 
 class InputSensor:
 
@@ -17,4 +17,4 @@ if __name__ == "__main__":
 
     sensor_1 = InputSensor()
     sensor_1.data = [("knife", 1, 99), ("scissor", 2, 65), ("spoon", 3, 33), ("spoon", 4, 80), ("keys", 5, 95)]
-    print(sensor_1.get_data())
+    pprint(sensor_1.get_data())

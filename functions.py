@@ -1,14 +1,17 @@
 from objects import Object
 import numpy as np
-
-
+from input_sensor import InputSensor
 
 class CombineModalities:
     def __init__(self):
         self.number_of_sensors = 0
+        self.sensor_list = []
         self.number_of_objects = 0
         self.objects_detected = []
         self.objects = []
+
+    def set_sensor_list(self,in_sensors):
+        self.sensor_list = in_sensors
 
     def count_number_of_sensors(self, sensor_input):
         self.number_of_sensors = len(sensor_input)
@@ -57,29 +60,19 @@ class CombineModalities:
 
 
 if __name__ == "__main__":
-    obj = CombineModalities()
+    combined_modality = CombineModalities()
 
-    # sensor1 = [('knife', 1, 99), ('scissor', 2, 65), ('spoon', 3, 33), ('spoon', 4, 80), ('keys', 5, 95)]
-    # sensor2 = [('knife', 1, 55), ('scissor', 2, 95), ('fork', 3, 99), ('spoon', 4, 99), ('keys', 5, 95)]
-    sensor1 = [("knife", 1, 99), ("scissor", 2, 65), ("spoon", 3, 33), ("spoon", 4, 80), ("keys", 5, 95)]
-    sensor2 = [("keys", 5, 95), ("spoon", 4, 99), ("fork", 3, 99), ("scissor", 2, 95), ("knife", 1, 55)]
+    sensor1 = InputSensor()
+    sensor1.data = [("knife", 1, 99), ("scissor", 2, 65), ("spoon", 3, 33), ("spoon", 4, 80), ("keys", 5, 95)]
+
+    sensor2 = InputSensor()
+    sensor2.data = [("keys", 5, 95), ("spoon", 4, 99), ("fork", 3, 99), ("scissor", 2, 95), ("knife", 1, 55)]
+
     sensor_input = [sensor1,sensor2]
-    objects_found = ["knife", "scissor", "fork", "spoon", "keys"]
 
-    result = obj.count_number_of_sensors(sensor_input)
+    combined_modality.set_sensor_list(sensor_input)
+
+    result = combined_modality.count_number_of_sensors(sensor_input)
     print("Number of sensors:",result)
     print("\n")
 
-    result = obj.detect_number_of_objects(sensor_input)
-    print("Number of objects detected:",result)
-    print("\n")
-
-    result = obj.detect_objects(sensor_input)
-    print("Objects detected:",result)
-    print("\n")
-
-    result = obj.create_objects(objects_found, sensor_input)
-    print("Objects created:")
-    for param in result:
-        print(param)
-    print("\n")
