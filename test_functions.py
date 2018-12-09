@@ -27,10 +27,10 @@ class TestCodes(unittest.TestCase):
         self.assertEqual(5,number_of_objects_actual)
 
 
-    def test_create_objects(self):
+    def test_merge_sensor_data(self):
 
-        created_objects = TestCodes.test.create_objects(TestCodes.sensor_input)
-        self.assertEqual(TestCodes.objects_detected[0],created_objects[0].name)
+        merged_list = TestCodes.test.merge_sensor_data(TestCodes.sensor_input)
+        self.assertEqual(10,len(merged_list))
 
 
 if __name__ == "__main__":
