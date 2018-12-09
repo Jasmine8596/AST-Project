@@ -15,6 +15,7 @@ class TestCodes(unittest.TestCase):
     sensor_input = [sensor1,sensor2]
 
     objects_detected = ["knife","scissor","fork","spoon","keys"]
+    merged_list = []
 
     def test_count_number_of_sensors(self):
 
@@ -29,12 +30,12 @@ class TestCodes(unittest.TestCase):
 
     def test_merge_sensor_data(self):
 
-        merged_list = TestCodes.test.merge_sensor_data(TestCodes.sensor_input)
-        self.assertEqual(10,len(merged_list))
+        TestCodes.merged_list = TestCodes.test.merge_sensor_data(TestCodes.sensor_input)
+        self.assertEqual(10,len(TestCodes.merged_list))
 
     def test_create_final_objects(self):
 
-        created_objects = TestCodes.test.create_final_objects(TestCodes.sensor_input)
+        created_objects = TestCodes.test.create_final_objects(TestCodes.merged_list)
         self.assertEqual(TestCodes.objects_detected[0],created_objects[0].name)
 
 
