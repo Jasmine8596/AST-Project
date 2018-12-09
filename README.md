@@ -5,7 +5,7 @@
 * Jasmine Padhye
 * Akash Hulihalli
 
-Submission till 02.01.2018:
+#### Submission till 02.01.2018:
 * The required output met
 * It has been taken care of increasing number of sensor inputs in further requirements
 * The structure of program was properly discussed and implemented
@@ -24,8 +24,8 @@ but object names assigned were in opposite sequence.
 <br>
 <br>
 - Input:<br>
-sensor1 = [] <br>
-sensor2 = [] <br>
+sensor1 = [(empty list)] <br>
+sensor2 = [(empty list)] <br>
 <br>
 Output: 
 These inputs counted the correct number of sensors and objects,
@@ -34,7 +34,7 @@ but threw error in detecting and creating objects.
 <br>
 - Input: <br>
 sensor1 = [(knife,1, 99%), (scissor, 2, 65%), (spoon, 3, 33%)] <br>
-sensor2 = [] <br>
+sensor2 = [(empty list)] <br>
 <br>
 Output:
 These inputs did not throw any errors and created the desired output.
