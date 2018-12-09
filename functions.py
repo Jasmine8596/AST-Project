@@ -20,6 +20,11 @@ class CombineModalities:
 
     def detect_number_of_objects(self,sensor_inputs):
 
+        for sensor in sensor_inputs:
+            for recognised_object in sensor.data:
+                if recognised_object[1] > self.number_of_objects:
+                    self.number_of_objects = recognised_object[1]
+
         return self.number_of_objects
 
 
@@ -39,5 +44,9 @@ if __name__ == "__main__":
 
     result = combined_modality.count_number_of_sensors(sensor_input)
     print("Number of sensors:",result)
+    print("\n")
+
+    number_of_objects = combined_modality.detect_number_of_objects(sensor_input)
+    print("Number of objects detected:",number_of_objects)
     print("\n")
 
