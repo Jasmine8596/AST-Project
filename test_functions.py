@@ -28,6 +28,8 @@ class TestCodes(unittest.TestCase):
 
 
     def test_merge_sensor_data(self):
+
+        self.test.number_of_objects = self.test.detect_number_of_objects(self.sensor_input)
         self.test.merged_sensor_data = self.test.merge_sensor_data(self.sensor_input)
         self.assertEqual(10,len(self.test.merged_sensor_data))
 
