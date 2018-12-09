@@ -7,7 +7,7 @@ class CombineModalities:
         self.number_of_sensors = 0
         self.sensor_list = []
         self.number_of_objects = 0
-        self.objects_detected = []
+        self.merged_sensor_data = []
         self.objects = []
 
     def set_sensor_list(self,in_sensors):
@@ -27,6 +27,15 @@ class CombineModalities:
 
         return self.number_of_objects
 
+    def merge_sensor_data(self,sensor_inputs):
+
+        for sensor in sensor_inputs:
+            for recognised_object in sensor.data:
+                self.merged_sensor_data.append(recognised_object)
+
+        return self.merged_sensor_data
+
+
 
 
 if __name__ == "__main__":
@@ -42,11 +51,15 @@ if __name__ == "__main__":
 
     combined_modality.set_sensor_list(sensor_input)
 
-    result = combined_modality.count_number_of_sensors(sensor_input)
-    print("Number of sensors:",result)
+    number_of_sensors = combined_modality.count_number_of_sensors(sensor_input)
+    print("Number of sensors:",number_of_sensors)
     print("\n")
 
     number_of_objects = combined_modality.detect_number_of_objects(sensor_input)
     print("Number of objects detected:",number_of_objects)
     print("\n")
+
+    merged_list = combined_modality.merge_sensor_data(sensor_input)
+    for i in merged_list:
+        print(i)
 
