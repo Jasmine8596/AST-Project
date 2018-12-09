@@ -1,4 +1,3 @@
-
 class Object:
 
     def __init__(self,object_name=None,object_num=0,object_percentage=0):
