@@ -35,6 +35,24 @@ class CombineModalities:
 
         return self.merged_sensor_data
 
+    def create_final_objects(self,sensor_data):
+
+        for obj_number in range(1,self.number_of_objects + 1):
+            items = []
+            for item in sensor_data:
+                if item[1] == obj_number:
+                    items.append(item)
+
+            created_object = Object("", obj_number, 0)
+            for compare in items:
+                if compare[2] > created_object.percentage:
+                    created_object.name = compare[0]
+                    created_object.percentage = compare[2]
+
+            self.objects.append(created_object)
+
+        return self.objects
+
 
 
 
@@ -60,6 +78,11 @@ if __name__ == "__main__":
     print("\n")
 
     merged_list = combined_modality.merge_sensor_data(sensor_input)
-    for i in merged_list:
+    # for i in merged_list:
+    #     print(i)
+
+    objects_created = combined_modality.create_final_objects(merged_list)
+    for i in objects_created:
         print(i)
+
 
