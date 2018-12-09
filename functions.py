@@ -39,19 +39,21 @@ class CombineModalities:
 
     def create_final_objects(self,sensor_data):
 
-        for obj_number in range(1,self.number_of_objects + 1):
-            items = []
-            for item in sensor_data:
-                if item[1] == obj_number:
-                    items.append(item)
+        if self.number_of_objects != 0:
 
-            created_object = Object("", obj_number, 0)
-            for compare in items:
-                if compare[2] > created_object.percentage:
-                    created_object.name = compare[0]
-                    created_object.percentage = compare[2]
+            for obj_number in range(1,self.number_of_objects + 1):
+                items = []
+                for item in sensor_data:
+                    if item[1] == obj_number:
+                        items.append(item)
 
-            self.objects.append(created_object)
+                created_object = Object("", obj_number, 0)
+                for compare in items:
+                    if compare[2] > created_object.percentage:
+                        created_object.name = compare[0]
+                        created_object.percentage = compare[2]
+
+                self.objects.append(created_object)
 
         return self.objects
 
