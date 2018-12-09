@@ -78,8 +78,6 @@ if __name__ == "__main__":
     print("\n")
 
     merged_list = combined_modality.merge_sensor_data(sensor_input)
-    # for i in merged_list:
-    #     print(i)
 
     objects_created = combined_modality.create_final_objects(merged_list)
     for i in objects_created:
