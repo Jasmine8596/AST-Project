@@ -15,6 +15,7 @@ class TestCodes(unittest.TestCase):
     sensor_input = [sensor1,sensor2]
 
     objects_detected = ["knife","scissor","fork","spoon","keys"]
+    percentage_required = [99,95,99,99,95]
 
     def test_count_number_of_sensors(self):
 
@@ -39,8 +40,11 @@ class TestCodes(unittest.TestCase):
         self.test.merged_sensor_data = self.test.merge_sensor_data(self.sensor_input)
         self.test.objects = self.test.create_final_objects(self.test.merged_sensor_data)
 
-        self.assertEqual(self.objects_detected[0],self.test.objects[0].name)
+        for det_obj,test_obj in zip(self.objects_detected,self.test.objects):
+            self.assertEqual(det_obj, test_obj.name)
 
+        for percent_req,test_obj in zip(self.percentage_required,self.test.objects):
+            self.assertEqual(percent_req, test_obj.percentage)
 
 if __name__ == "__main__":
     unittest.main(exit=False)
