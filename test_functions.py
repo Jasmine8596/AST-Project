@@ -32,6 +32,11 @@ class TestCodes(unittest.TestCase):
         merged_list = TestCodes.test.merge_sensor_data(TestCodes.sensor_input)
         self.assertEqual(10,len(merged_list))
 
+    def test_create_final_objects(self):
+
+        created_objects = TestCodes.test.create_final_objects(TestCodes.sensor_input)
+        self.assertEqual(TestCodes.objects_detected[0],created_objects[0].name)
+
 
 if __name__ == "__main__":
     unittest.main(exit=False)
