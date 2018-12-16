@@ -7,4 +7,8 @@ The software is used to take input from sensors, apply two different algorithms 
 input data which would predict the objects in image, and give correct output based on
 the combined data.
 
+### Installation
+* Download the folder to your desired location.
+* Run functions.py to see the working of the software.
+* Run test_functions.py to test the software functions.
 
