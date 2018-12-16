@@ -18,12 +18,6 @@ class TestCodes(unittest.TestCase):
     objects_detected = ["knife","scissor","fork","spoon","keys"]
     percentage_required = [99,95,99,99,95]
 
-    sensor1 = []
-    sensor2 = []
-    objects_detected = []
-    percentage_required = []
-    objects = []
-
 
     def test_count_number_of_sensors(self):
 
@@ -32,17 +26,12 @@ class TestCodes(unittest.TestCase):
 
     def test_detect_number_of_objects(self):
 
-
         self.test.number_of_objects = self.test.detect_number_of_objects(self.sensor_input)
         self.assertEqual(5,self.test.number_of_objects)
 
 
-        result = TestCodes.test.detect_number_of_objects([TestCodes.sensor1,TestCodes.sensor2])
-        self.assertEqual(0,result)
-
-
     def test_merge_sensor_data(self):
-
+        self.test.merged_sensor_data = []
         self.test.number_of_objects = self.test.detect_number_of_objects(self.sensor_input)
         self.test.merged_sensor_data = self.test.merge_sensor_data(self.sensor_input)
         self.assertEqual(10,len(self.test.merged_sensor_data))
