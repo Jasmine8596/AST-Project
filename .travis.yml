@@ -3,4 +3,5 @@ python:
   - "3.5"
 
 script:
+  - cd AST-Project
   - python3 test_functions.py
