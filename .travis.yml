@@ -9,4 +9,5 @@ script:
   - python3 test_functions.py
 
 after_success:
-  - codecov -t e81d06c5-c750-4d0d-aabc-4947323cee00
+  - codecov
+  - bash < (curl -s https://codecov.io/bash)
