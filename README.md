@@ -17,7 +17,7 @@ the combined data.
 |---------|--------|-----|
 | CI Status | [![Build Status](https://travis-ci.com/Jasmine8596/AST-Project.svg?branch=master)](https://travis-ci.com/Jasmine8596/AST-Project) | [![Build Status](https://travis-ci.com/Jasmine8596/AST-Project.svg?branch=dev)](https://travis-ci.com/Jasmine8596/AST-Project)|
 | Code Quality | [![CodeFactor](https://www.codefactor.io/repository/github/jasmine8596/ast-project/badge)](https://www.codefactor.io/repository/github/jasmine8596/ast-project) | [![CodeFactor](https://www.codefactor.io/repository/github/jasmine8596/ast-project/badge)](https://www.codefactor.io/repository/github/jasmine8596/ast-project)|
-| Code Coverage | [![codecov](https://codecov.io/gh/Jasmine8596/AST-Project/branch/master/graph/badge.svg)](https://codecov.io/gh/Jasmine8596/AST-Project) | [![codecov](https://codecov.io/gh/Jasmine8596/AST-Project/branch/master/graph/badge.svg)](https://codecov.io/gh/Jasmine8596/AST-Project)|
+| Code Coverage | [![codecov](https://codecov.io/gh/Jasmine8596/AST-Project/branch/master/graph/badge.svg)](https://codecov.io/gh/Jasmine8596/AST-Project) | [![codecov](https://codecov.io/gh/Jasmine8596/AST-Project/branch/dev/graph/badge.svg)](https://codecov.io/gh/Jasmine8596/AST-Project)|
 
 ### Report
 * The weekly reports/updates can be found in Weekly_report.md
