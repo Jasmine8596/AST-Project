@@ -12,3 +12,8 @@ the combined data.
 * Run functions.py to see the working of the software.
 * Run test_functions.py to test the software functions.
 
+### Status
+| Service | Master | Dev |
+|---------|--------|-----|
+| CI Status | [![Build Status](https://travis-ci.com/Jasmine8596/AST-Project.svg?branch=master)](https://travis-ci.com/Jasmine8596/AST-Project) | [![Build Status](https://travis-ci.com/Jasmine8596/AST-Project.svg?branch=dev)](https://travis-ci.com/Jasmine8596/AST-Project)|
+| Code Quality | [![CodeFactor](https://www.codefactor.io/repository/github/jasmine8596/ast-project/badge)](https://www.codefactor.io/repository/github/jasmine8596/ast-project) | [![CodeFactor](https://www.codefactor.io/repository/github/jasmine8596/ast-project/badge)](https://www.codefactor.io/repository/github/jasmine8596/ast-project)|
