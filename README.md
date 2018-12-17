@@ -17,3 +17,10 @@ the combined data.
 |---------|--------|-----|
 | CI Status | [![Build Status](https://travis-ci.com/Jasmine8596/AST-Project.svg?branch=master)](https://travis-ci.com/Jasmine8596/AST-Project) | [![Build Status](https://travis-ci.com/Jasmine8596/AST-Project.svg?branch=dev)](https://travis-ci.com/Jasmine8596/AST-Project)|
 | Code Quality | [![CodeFactor](https://www.codefactor.io/repository/github/jasmine8596/ast-project/badge)](https://www.codefactor.io/repository/github/jasmine8596/ast-project) | [![CodeFactor](https://www.codefactor.io/repository/github/jasmine8596/ast-project/badge)](https://www.codefactor.io/repository/github/jasmine8596/ast-project)|
+
+### Report
+* The weekly reports/updates can be found in Weekly_report.md
+
+### Updates required
+* Changes required in file names according to naming conventions.
+* Adding more test cases.
