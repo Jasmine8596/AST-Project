@@ -9,5 +9,7 @@ script:
   - python3 test_functions.py
 
 after_success:
+  - coverage run test_functions.py
+  - coverage report
   - codecov
   - bash < (curl -s https://codecov.io/bash)
