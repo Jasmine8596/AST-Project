@@ -1,88 +1,30 @@
-# AST-Project
-
-## Group Members:
-
+### Group Members:
 * Jasmine Padhye
 * Akash Hulihalli
 
-#### Submission till 02.01.2018:
-* The required output met
-* It has been taken care of increasing number of sensor inputs in further requirements
-* The structure of program was properly discussed and implemented
-* The code is divided into small tasks which hopefully should allow us to expand the code for further requirements rather than modifying
+### Overview:
+The software is used to take input from sensors, apply two different algorithms on the
+input data which would predict the objects in image, and give correct output based on
+the combined data.
 
-#### Report of output till 02.01.2018 with updated requirements:
-- Input1: <br>
-sensor1 = [(knife,1, 99%), (scissor, 2, 65%), (spoon, 3, 33%), (spoon, 4, 80%), (keys, 5, 95%)]
-<br>
-sensor2 = [ (keys, 5, 95%), (spoon, 4, 99%),(fork, 3, 99%), (scissor, 2, 95%), (knife,1, 55%)]
-<br>
-<br>
-Output:
-These inputs counted the correct number of sensors and objects, 
-but object names assigned were in opposite sequence.
-<br>
-<br>
-- Input2:<br>
-sensor1 = [(empty list)] <br>
-sensor2 = [(empty list)] <br>
-<br>
-Output: 
-These inputs counted the correct number of sensors and objects,
-but threw error in detecting and creating objects.
-<br>
-<br>
-- Input3: <br>
-sensor1 = [(knife,1, 99%), (scissor, 2, 65%), (spoon, 3, 33%)] <br>
-sensor2 = [(empty list)] <br>
-<br>
-Output:
-These inputs did not throw any errors and created the desired output.
-<br>
-<br>
-- Input4: <br>
-sensor1 = [(knife,1, 99%), (scissor, 2, 65%), (spoon, 3, 33%)] <br>
-sensor2 = [(KNIFE,1, 99%), (SCISSOR, 2, 65%), (SPOON, 3, 33%)] <br>
-<br>
-Output:
-These inputs did not throw any errors and created desired output.
-<br>
-<br>
-- Input5: <br>
-sensor1 = [(knife,1, 99%), (scissor, 2, 65%)] <br>
-sensor2 = [(fork, 3, 99%), (spoon, 4, 99%)] <br>
-<br>
-Output:
-These inputs counted the correct number of sensors but detected wrong number of objects. And so, gave undesired output.
-<br>
-<br>
-- Input6:<br>
-sensor1 = [(knife,1, 94%),(knife,1, 69%),(knife,1, 89%)] <br>
-sensor2 = [(knife,1, 99%),(fork, 3, 99%)] <br>
-<br>
-Output:
-These inputs counted correct number of sensors but wrong number of objects and so the output was undesired.
-<br>
-<br>
+### Installation
+* Download the folder to your desired location.
+* Run functions.py to see the working of the software.
+* Run test_functions.py to test the software functions.
 
-#### Updates till 09.01.2018:
+### Status
+| Service | Master | Dev |
+|---------|--------|-----|
+| CI Status | [![Build Status](https://travis-ci.com/Jasmine8596/AST-Project.svg?branch=master)](https://travis-ci.com/Jasmine8596/AST-Project) | [![Build Status](https://travis-ci.com/Jasmine8596/AST-Project.svg?branch=dev)](https://travis-ci.com/Jasmine8596/AST-Project)|
+| Code Quality | [![CodeFactor](https://www.codefactor.io/repository/github/jasmine8596/ast-project/badge)](https://www.codefactor.io/repository/github/jasmine8596/ast-project) | [![CodeFactor](https://www.codefactor.io/repository/github/jasmine8596/ast-project/badge)](https://www.codefactor.io/repository/github/jasmine8596/ast-project)|
+| Code Coverage | [![codecov](https://codecov.io/gh/Jasmine8596/AST-Project/branch/master/graph/badge.svg)](https://codecov.io/gh/Jasmine8596/AST-Project) | [![codecov](https://codecov.io/gh/Jasmine8596/AST-Project/branch/dev/graph/badge.svg)](https://codecov.io/gh/Jasmine8596/AST-Project)|
 
-- Objects are created for sensor inputs to implement Image matching algorithm or RGB-D Object Detection and Semantic Segmentation for Autonomous Manipulation in Clutter according to the updated requirement.
-- Number of objected detected are counted by object number rather than length of list.
-This helps to detect correct number of objects in case of separate or repeating objects, like input 5 and 6.
-- Merge sensor data module is added to combine all the sensor data into one single list. This helps in creating objects in a simpler manner.
-- The objects with same object number are compared and the one with higher percentage is created into object. 
-This is done in a single module and no duplicates are created.
-- Condition for empty list is also updated.
+### Report
+* The weekly reports/updates can be found in Weekly_report.md
 
-<br>
-
-#### Submission for 09.01.2018:
-
-| Test function | Description |
-|---------------|-------------|
-| test_count_number_of_sensors | This test case tests the number of input sensors counted |
-| test_detect_number_of_objects | This test case tests the number of objects detected |
-| test_merge_sensor_data | This test case tests the length of merged list which is summation of elements of all the input sensors |
-| test_create_final_objects | This test case tests if the object names and object percentages are correct and in true sequence |
+### Updates required
+* Changes required in file names according to naming conventions.
+* Adding more test cases.
+* Creating folder structure.
+* Integrating codecov.
 
